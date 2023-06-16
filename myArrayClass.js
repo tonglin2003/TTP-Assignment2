@@ -95,6 +95,30 @@ class MyArray {
         return false;
     }
 
+    myIndexOf(target)
+    {
+        let result = 0;
+        for (let i = 0; i < this.length; i++)
+        {
+            if (this.arr[i] === target)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    mylastIndexOf(target)
+    {
+        for (let i = this.length-1; i >= 0; i--)
+        {
+            if (this.arr[i] === target)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
 
 }
 
@@ -161,4 +185,17 @@ console.log("----- Testing for myIncludes() --------");
 console.log(
     myArr.myIncludes(10)
 );
+
+console.log("----- Testing for myIndexOf() --------");
+console.log(
+    myArr.myIndexOf(9)
+);
+
+console.log("----- Testing for mylastIndexOf() --------");
+myArr.myPush(1);
+console.log(
+    myArr.mylastIndexOf(1)
+);
+
+
 
